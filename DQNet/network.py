@@ -124,7 +124,7 @@ class SACAgent():
         for colored_cnt in range(max_node): # until coloring all the nodes in all the graphs
             print("Number of Nodes Colored:", colored_cnt)
             # decides which nodes to color for each graph
-            actions, _, _ = self.decide_node_coloring(graphs, node_cnts, batch, colored_arrs, colored_cnt, evaluate=True)
+            actions, _ = self.decide_node_coloring(graphs, node_cnts, batch, colored_arrs, colored_cnt, evaluate=True)
             # colors the selected nodes stored in actions
             colors = graphs.color_batch(actions)
             # sets max color for graphs to color in this step if the selected color is bigger than max color
@@ -263,7 +263,7 @@ class SACAgent():
                         q_pred.append(action_val)
                         actions.append(node)
 
-        return actions, torch.Tensor(q_pred).requires_grad_(), not_finished
+        return actions, torch.Tensor(q_pred).requires_grad_()
     
     def get_rewards(self, batch, colors, max_colors):
         # rewards are calculated for each graph in batch

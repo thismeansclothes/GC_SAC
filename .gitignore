@@ -1,0 +1,34 @@
+# IDE related files:
+.vscode
+*/.vscode
+
+# Language Related Files
+*/__pycache__
+*/*/__pycache__
+*/*.pyc
+*/*/*.pyc
+*/*.gch.h
+*/*/*.gch.h
+
+# Executables
+*/*.out
+*/*.exe
+*/*/*.exe
+*/*/*.out
+
+# Trial results
+Greedy_Coloring/Coeff_Test/*.csv
+*/out.csv
+
+# Caches:
+*/*/*.gch
+
+# Large Matrices
+Matrices/large/*
+
+# OS icons
+desktop.ini
+
+# Personal Working Folders
+./Temp/
+./Temp/*/*.*

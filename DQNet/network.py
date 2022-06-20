@@ -14,6 +14,8 @@ from utils import freeze, unfreeze
 from sac_model import SACActor, DoubleCritic
 from buffer import ReplayBuffer
 
+import copy
+from torch.optim import Adam
 
 def save_model(self, path):
         torch.save(self.state_dict(), path)
